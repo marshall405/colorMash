@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>COLOR MASH</title>
+    <link rel='stylesheet' href='main.css'>
+    <script>
+      function noSpace(){
+      if(event.keyCode == 32){
+      return false;
+      }
+    }
+    </script>
+
+
+  </head>
+  <body>
+    <div id='container'>
+     
+      <div id='settings'>
+         <div id='closeSettings'>&times;</div>
+        <form id='myForm'>
+          <ul>
+            <h3>PATTERN</h3>
+            <li>CIRCLE: <input id="circle" type="checkbox" value='circle' checked></li>
+            <li>CIRCLE SIZE:<span id='sizeSetting'> 1 </span><input id='slider' type='range' min='1' max='175' value = 1 step= 2></li>
+            <li>SQUARE: <input id="square" type="checkbox" value='square'></li>
+
+          </ul>
+          <ul id="canvasSettings">
+            <h3>CANVAS</h3>
+            <li>WIDTH: <span id='c'> 400 </span><input id='canvasWidth' type="range" min=100 max=650 step=100 value=400></li>
+            <li>HEIGHT: <span id='h'> 400 </span><input id='canvasHeight' type='range' min= 100 max=650 step=100 value = 400></li>
+            <li><button id='defaultSize'>RESET</button></li>
+          </ul>
+        </form>
+      </div>
+    
+      <input id="firstColor" type="text" placeholder="first color" onkeypress="return noSpace()">
+      <input id="secondColor" type="text" placeholder='second color' onkeypress="return noSpace()">
+      <button id='mashColors'>MASH COLORS</button>
+      <button id='randomColors'>RANDOM COLORS</button> 
+      <canvas id="canvas" height="400" width="500"></canvas>
+      <button id="gobstopper">GOBSTOPPER</button>
+    </div>
+  
+  
+    <script id='jscript' src="square.js"></script>
+    <script src="canvasSettings.js"></script>
+    <script src='gobstopper.js'></script>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
